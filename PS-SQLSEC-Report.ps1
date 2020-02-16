@@ -212,5 +212,6 @@ INSERT into $storeTable (IP,CNAME,DB,DOMAIN,LOGIN,CREATED,MODIFIED,LOGINTYPE,SER
         } 
 
     } 
+
 }
     
