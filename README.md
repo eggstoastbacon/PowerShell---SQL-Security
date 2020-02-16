@@ -24,7 +24,10 @@ This is also useful for finding and removing users who may have left your org bu
 
 If you have try this let me know if you find any issues in your environment so I can polish this and further generalize it for public use.
 
+#
+
 Dependencies:
+
 This requires SQL Management Studio is installed from where this is run.
 
 Require WMI and SQL Port access to the servers you will scan.
