@@ -48,7 +48,7 @@ foreach ($IP in $IPs) {
     $server = $sysinfo.Name
 
     $portCheck = Test-NetConnection -computername $IP -port $SQLPort
-    if ($portCheck.tcpTestSucceeded -like "True") { $portPassed = "True" }else { write-host "Unable to Connect to $IP on $SQLPort" }
+    if ($portCheck.tcpTestSucceeded -like "True") { $portPassed = "True" } else { write-host "Unable to Connect to $IP on $SQLPort" }
 
     if ($portPassed -like "True") {
 
