@@ -1,3 +1,5 @@
+#Created by EGGSTOASTBACON :: https://github.com/eggstoastbacon
+
 #SQL MANAGEMENT STUDIO SHOULD BE INSTALLED FROM WHERE YOU RUN THIS
 #The server this is run from should have SQL Port and WMI access to the servers you intend to connect to.
 #You will require file sqlserver.psd1, change the path to it below.
@@ -44,7 +46,6 @@ foreach ($IP in $IPs) {
     #Get the name of the server
     $sysinfo = Get-WmiObject -computer $IP -credential $wmiCredentials -Class Win32_ComputerSystem -ErrorAction SilentlyContinue
     $server = $sysinfo.Name
-
 
     $portCheck = Test-NetConnection -computername $IP -port $SQLPort
     if ($portCheck.tcpTestSucceeded -like "True") { $portPassed = "True" }else { write-host "Unable to Connect to $IP on $SQLPort" }
@@ -115,11 +116,9 @@ foreach ($IP in $IPs) {
             $userrole = $userrole + "public"
             $userrole
 
-
             if ($login.name -notlike "*dbo*" -and $login.name -notlike "sys"`
                     -and $login.name -notlike "guest" -and $login.name -notlike "*##*"`
                     -and $login.name -notlike "*MS_*" -and $login.name -notlike "*_SCHEMA*") {
-
 
                 #Create an object and write properties about the account
                 $row = New-Object PSObject
@@ -213,4 +212,4 @@ INSERT into $storeTable (IP,CNAME,DB,DOMAIN,LOGIN,CREATED,MODIFIED,LOGINTYPE,SER
 
     } 
 }
-    
+   
