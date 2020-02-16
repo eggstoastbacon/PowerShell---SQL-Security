@@ -32,7 +32,7 @@ Account provided for scan needs to be SA
 
 This requires SQL Management Studio is installed from where this is run.
 
-Require WMI and SQL Port access to the servers you will scan.
+Requires WMI and SQL port access to the servers you will scan.
 
 If scheduled run it only once per day.
 
