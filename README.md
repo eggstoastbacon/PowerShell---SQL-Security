@@ -12,6 +12,8 @@ This is a script for collecting MSSQL security information such as;
 
 .Account is Enabled or Disabled
 
+.Account Creation and Modified Date
+
 & More
 
 Designed to be run once per day (day's data will be overwritten if run more than once per day)
