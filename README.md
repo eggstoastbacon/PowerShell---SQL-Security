@@ -28,6 +28,8 @@ If you have try this let me know if you find any issues in your environment so I
 
 Dependencies:
 
+Account provided for scan needs to be SA
+
 This requires SQL Management Studio is installed from where this is run.
 
 Require WMI and SQL Port access to the servers you will scan.
